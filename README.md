@@ -5,4 +5,4 @@ The .py files essentially contain classes and functions for processing raw measu
 
 Screenshot:
 
-[[https://github.com/truhanen/RICSAnalysis/blob/master/rics/screenshot.png | height = 150px ]]
+![](https://github.com/truhanen/RICSAnalysis/blob/master/rics/screenshot.png "Screenshot")
