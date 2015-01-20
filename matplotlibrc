@@ -1,0 +1,24 @@
+# edit inside code:
+# mpl.rcParams['lines.color'] = 'r'
+# mpl.rc('lines', linewidth=2, color='r')
+
+# latexissa scale 50 % -> kaksi kuvaa mahtuu vierekkäin ja fonttikooksi tulee 10
+font.size             : 20
+figure.figsize        : 6, 5
+# labelit mahtuu juuri ja juuri
+#figure.subplot.right   : 0.97    # the right side of the subplots of the figure
+figure.subplot.top     : 0.95    # the top of the subplots of the figure
+figure.subplot.bottom : 0.109
+figure.subplot.left   : 0.1
+figure.subplot.hspace : 0.4
+
+xtick.labelsize       : small
+ytick.labelsize       : small
+legend.fontsize       : small
+
+axes.color_cycle      : b, g, r, y, m, c, FF8000, k, 8000FF
+#axes.color_cycle      : 010101, ED2D2E, 008C47, 1859A9, F37D22, 662C91, A11D20, B33893
+
+text.usetex           : True
+# sans-fontit ja kreikkalaiset kirjaimet pystyyn (\mu != \upmu)
+text.latex.preamble   : \usepackage{cmbright}#,\usepackage{upgreek}
