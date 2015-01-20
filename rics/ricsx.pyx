@@ -81,11 +81,9 @@ cdef cnp.ndarray[cnp.double_t, ndim = 2] getacunnormfft(int ntaus,
     ifft_object = pyfftw.builders.irfft2(fft_object(), axes=(1,))
     cdef float part = max(1, (len(imgs) - 1) / 10.)
     for i in range(nimgs):
-        fft_object.get_input_array()[:] = imgs2[
-            i]  # element-wise assignment in np.arrays
+        fft_object.get_input_array()[:] = imgs2[i]  # element-wise assignment in np.arrays
         fft = fft_object()
-        ifft_object.get_input_array()[
-            :] = fft.real ** 2 + fft.imag ** 2  # np.conjugate(fft) * fft
+        ifft_object.get_input_array()[:] = fft.real ** 2 + fft.imag ** 2  # np.conjugate(fft) * fft
         ifft = ifft_object()
         corr[i] = np.sum(ifft, axis=0)[:ntaus]
                          # rows should not be averaged in this method
