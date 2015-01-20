@@ -24,7 +24,9 @@ class Measurement:
                  guess=[1.35,3,87.,.25,-.03], fixed=[1,0,1,0,1], dwell=9.5,
                  pxsize=.02, crop=(0,0,0,0), corrmethod='fft', acf=None,
                  detectormeas=None):
-        '''Parameters: path: .tif or .nd2 file path, ntaus: length of the calculated autocorrelation
+        '''Class for easy rics measurement data (confocal 2D image) processing
+        and analysis. Parameters: path: image (.tif or .nd2) file path,
+        ntaus: length of the calculated autocorrelation
         estimator (if None, check the getntaus()-function), maximg: maximum
         frames to load from the file, simpath: path of .txt data file exported
         from simfcs.exe, fitmethod: fit method, fitdata: 'cython' or 'simfcs',
@@ -247,7 +249,7 @@ class Measurement:
             model = odr.Model(self.acf)
             fit = odr.ODR(data, model, self.guess, ifixb=self.fixed, maxit=1000, job=10)    
             output = fit.run()
-            self._fitparams = output.beta 	# 'beta' is an array of the parameter estimates
+            self._fitparams = output.beta     # 'beta' is an array of the parameter estimates
             self._fitcov = output.cov_beta   # parameter covariance matrix
             self._fiterrors = output.sd_beta # parameter standard uncertainties
             if False:

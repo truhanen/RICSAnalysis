@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-# Created on Thu Mar 13 12:13:56 2014
+# Created on Thu Mar 13 12:13:56 201
+
+'''Classes for processing and analyzing raw FCS files exported by ConfoCor2
+FCS microscope system.
+'''
 
 import pyximport; pyximport.install()
 import CC2UtilsX
