@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 # Created on Tue Oct  1 13:21:36 2013
 
+'''
+Cython algorithms for signal correlation analysis.
+'''
+
 import numpy as np
 cimport numpy as cnp
 import time

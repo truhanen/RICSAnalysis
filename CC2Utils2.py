@@ -437,7 +437,7 @@ class Fit:
         return fixed
 
     def printSummary(self, output):
-        p = output.beta 	# 'beta' is an array of the parameter estimates
+        p = output.beta     # 'beta' is an array of the parameter estimates
         cov = output.cov_beta   # parameter covariance matrix
         uncertainty = output.sd_beta # parameter standard uncertainties
         guess = self.guess.getfitvalues(self.func)
